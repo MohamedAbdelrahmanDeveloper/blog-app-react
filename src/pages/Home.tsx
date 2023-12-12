@@ -19,7 +19,7 @@ function Home() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ut iure dolorum facere blanditiis dolores, in debitis eaque deleniti exercitationem.
             </p>
             <div className="flex space-x-2">
-              <Link to='/blog' className="btn btn-primary mask mask-heart">Explore Blogs</Link>
+              <Link to='/blog' className="btn btn-primary">Explore Blogs</Link>
             </div>
           </div>
         </div>
