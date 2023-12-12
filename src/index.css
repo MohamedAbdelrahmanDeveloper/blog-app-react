@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+[dir="rtl"] {
+    [class*="space-x"] > :not(template) ~ :not(template) {
+        --space-x-reverse: 0 !important;
+        margin-left: calc(1rem * var(--space-x-reverse)) !important;
+        margin-right: calc(1rem * calc(1 - var(--space-x-reverse))) !important;
+    }
+}
