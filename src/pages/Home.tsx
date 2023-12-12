@@ -3,6 +3,7 @@ import Blog from "../components/blog/Blog";
 import AuthorCard from "../components/home/AuthorCard";
 
 function Home() {
+  
 
   return (
     <div className="mt-10 mb-20 space-y-32">
@@ -10,7 +11,7 @@ function Home() {
         <div className="hero-content flex-col lg:flex-row-reverse gap-14">
           <div className="relative">
             <div className="absolute w-full h-full -left-3 top-3 -z-10 ring-4 ring-primary rounded-bl-[15%] rounded-tr-[15%] shadow-2xl"></div>
-            <img src="https://cms-cdn.placeholder.co/Home_page1_PRIORITY_077711842c.webp" className="md:max-w-2xl h-96 md:h-[40rem] rounded-bl-[15%] rounded-tr-[15%] shadow-2xl" />
+            <img src="https://cms-cdn.placeholder.co/Home_page1_PRIORITY_077711842c.webp" alt="hello" className="md:max-w-2xl h-96 md:h-[40rem] rounded-bl-[15%] rounded-tr-[15%] shadow-2xl" />
           </div>
           <div className="md:-ms-20">
             <h1 className="text-4xl font-bold">Welcome to My <span className="text-primary">Blogs</span></h1>
@@ -35,40 +36,40 @@ function Home() {
       <section className="flex flex-col gap-10 md:flex-row my-10">
         <div className="space-y-5 md:w-2/4">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold text-primary">Lorem ipsum dolor sit</h1>
-            <p className="text-base-content/50 ps-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore repudiandae illum tempora pariatur harum sequi, dicta deleniti totam animi.</p>
+            <h1 className="text-3xl font-bold text-primary">Features and Overview</h1>
+            <p className="text-base-content/50 ps-2">Enjoy reading the latest articles and stay updated with the latest news and updates</p>
           </div>
           <div className="flex space-x-3">
             <div className="avatar placeholder">
-              <div className="bg-base-content/10 text-primary rounded-full w-14 h-14">
-                <span className="text-xl">D</span>
+              <div className="bg-base-content/10 rounded-full w-14 h-14">
+                <span className="text-xl"><i className="bi bi-search"></i></span>
               </div>
             </div> 
             <div>
               <h2 className="text-lg">Search</h2>
-              <p className="text-base-content/50">Lorem ipsum dolor sit amet.</p>
+              <p className="text-base-content/50">Flexibility in Research</p>
             </div>
           </div>
           <div className="flex space-x-3">
             <div className="avatar placeholder">
-              <div className="bg-base-content/10 text-primary rounded-full w-14 h-14">
-                <span className="text-xl">D</span>
+              <div className="bg-base-content/10 rounded-full w-14 h-14">
+                <span className="text-xl"><i className="bi bi-eye-fill"></i></span>
               </div>
             </div> 
             <div>
               <h2 className="text-lg">Visit</h2>
-              <p className="text-base-content/50">Lorem ipsum dolor sit amet.</p>
+              <p className="text-base-content/50">18,877 Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
           <div className="flex space-x-3">
             <div className="avatar placeholder">
-              <div className="bg-base-content/10 text-primary rounded-full w-14 h-14">
-                <span className="text-xl">D</span>
+              <div className="bg-base-content/10 rounded-full w-14 h-14">
+                <span className="text-xl"><i className="bi bi-postcard"></i></span>
               </div>
             </div> 
             <div>
-              <h2 className="text-lg">Sign</h2>
-              <p className="text-base-content/50">Lorem ipsum dolor sit amet.</p>
+              <h2 className="text-lg">Posts</h2>
+              <p className="text-base-content/50">8,548 posts Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
         </div>
@@ -79,7 +80,7 @@ function Home() {
               <h2 className="card-title">Welcome to My Blogs</h2>
               <p>Enjoy reading the latest articles and stay updated with the latest news and updates</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Read..</button>
+                <button className="btn btn-primary">Blogs</button>
               </div>
             </div>
           </div>

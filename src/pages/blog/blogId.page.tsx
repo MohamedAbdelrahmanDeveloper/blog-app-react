@@ -1,14 +1,11 @@
-import React from 'react'
 import BlogSmall from '../../components/blog/BlogSmall'
 
-type Props = {}
-
-function BlogIdPage({}: Props) {
+function BlogIdPage() {
   return (
     <div className="flex flex-col md:flex-row max-w-6xl mx-auto my-10 gap-4" dir='rtl'>
       <div className="md:w-3/4 space-y-5">
         <h1 className="text-3xl">تشغيل حساب آلي في منصّة بسّام</h1>
-        <img src="/img.jpg" className="w-full rounded-box" />
+        <img src="/img.jpg" className="w-full rounded-box" alt="hello" />
         <p className="text-lg">الحسابات الآلية هي وسيلة لتوفير نشر مؤتمت لتغذية معينة في منصّة بسّام. المقال يشرح طريقة عملها وشروط استخدامها.</p>
         <ul className="[&>li]:flex [&>li]:items-center [&>li]:gap-x-1 [&>li>svg]:fill-base-content/70 [&>li>svg]:w-5 [&>li>svg]:h-5 flex gap-x-4 text-base-content border-y border-base-content/10 py-4">
           <li>

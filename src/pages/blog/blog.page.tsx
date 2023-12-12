@@ -1,8 +1,6 @@
 import Blog from '../../components/blog/Blog';
 
-type Props = {}
-
-function BlogPage({}: Props) {
+function BlogPage() {
   return (
     <section className='xl:max-w-7xl mx-auto my-6'>
       <h3 className="text-xl font-medium my-6">أحدث المقالات</h3>

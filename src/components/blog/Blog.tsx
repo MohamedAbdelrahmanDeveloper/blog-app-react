@@ -8,7 +8,7 @@ type Props = {
 function Blog({e, className}: Props) {
   return (
     <div className={`${className} card bg-base-100 shadow-xl`}>
-        <figure><img src="https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Shoes" /></figure>
+        <figure><img src="https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="hello" /></figure>
         <div className="card-body p-4">
             <div className="flex space-x-3">
               <Link to={`/user/${e}`} >
