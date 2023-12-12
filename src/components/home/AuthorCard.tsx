@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-type Props = {}
-
-function AuthorCard({}: Props) {
+function AuthorCard() {
   return (
     <div className="shadow rounded-box md:w-72 flex flex-col items-center text-center space-y-1 p-4">
         <Link to={`/user/s`} >
