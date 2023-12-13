@@ -2,11 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-padding-top: 80px;
+}
 
-[dir="rtl"] {
-    [class*="space-x"] > :not(template) ~ :not(template) {
-        --space-x-reverse: 0 !important;
-        margin-left: calc(1rem * var(--space-x-reverse)) !important;
-        margin-right: calc(1rem * calc(1 - var(--space-x-reverse))) !important;
-    }
+[dir="rtl"] [class*="space-x"] > :not(template) ~ :not(template) {
+    --space-x-reverse: 0 !important;
+    margin-left: calc(1rem * var(--space-x-reverse)) !important;
+    margin-right: calc(1rem * calc(1 - var(--space-x-reverse))) !important;
+}
+
+/* html:not([data-theme='light']) .wmde-markdown-var , */
+html:not([data-theme='light']) .wmde-markdown-color {
+    --tw-text-opacity: 1;
+    --color-border-muted: var(--fallback-bc,oklch(var(--bc)/0.5)) !important;
+    --color-fg-default: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity))) !important;
+    --color-fg-muted: var(--fallback-bc,oklch(var(--bc)/0.8)) !important;
+    --color-fg-subtle: #6e7781 !important;
+    --color-canvas-default: var(--fallback-b1,oklch(var(--b1)/1)) !important;
+    --color-canvas-subtle: var(--fallback-bc,oklch(var(--bc)/0.2)) !important;
+    @apply bg-base-100 !important
+}
+
+.wmde-markdown * {
+    @apply border-base-content/50 !important
+}
+
+[dir="rtl"] .wmde-markdown blockquote {
+    border-left: 0px !important;
+    @apply border-s-4 !important
 }

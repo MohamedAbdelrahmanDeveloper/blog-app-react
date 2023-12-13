@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -59,7 +59,7 @@ function HeaderApp() {
                   <Link className="btn btn-ghost text-xl" to='/'>daisyUI</Link>
                   <Link className='btn btn-ghost btn-sm rounded-btn' to='/'>Home</Link>
                   <Link className='btn btn-ghost btn-sm rounded-btn' to='/blog'>Blog</Link>
-                  {/* <Link className='btn btn-ghost btn-sm rounded-btn' to='/users'>Users</Link> */}
+                  <Link className='btn btn-ghost btn-sm rounded-btn' to='/blog/add'>Add blog</Link>
                </div>
             </div>
 

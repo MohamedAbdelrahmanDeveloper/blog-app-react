@@ -3,8 +3,6 @@ import Blog from "../components/blog/Blog";
 import AuthorCard from "../components/home/AuthorCard";
 
 function Home() {
-  
-
   return (
     <div className="mt-10 mb-20 space-y-32">
        <section className="hero md:py-16">

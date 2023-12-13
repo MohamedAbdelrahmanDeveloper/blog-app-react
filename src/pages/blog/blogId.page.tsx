@@ -1,8 +1,38 @@
-import BlogSmall from '../../components/blog/BlogSmall'
+import MarkdownEditor from '@uiw/react-markdown-editor'
+import Blog from '../../components/blog/Blog'
+import { useEffect, useState } from 'react';
+import ScrollSpy from '../../components/blog/ScrollSpy';
+import { MD_DATA } from "./data";
+
 
 function BlogIdPage() {
+  const [elements, setElements] = useState<any>([])
+  const [ids, setIds] = useState<any>([])
+
+  const getIdsFromElements = (elements: []):[] => {
+    const newElements:any = []
+    elements.forEach((e:any) => {
+      newElements.push(e.id)
+    })
+    return newElements
+  }
+
+  useEffect(() => {
+    let element = document.querySelector('#blog .wmde-markdown')
+    let newElements: any = []
+    if (element?.children.length && element?.children.length > 0) {
+      Array.from(element?.children).forEach(e => {
+        if (e.tagName[0] === 'H') {
+          newElements.push({id: e.id,tag: e.tagName, text: e.textContent})
+        }
+      })
+    }
+    setElements([...newElements])
+    setIds(getIdsFromElements(newElements))
+  }, [])
+  
   return (
-    <div className="flex flex-col md:flex-row max-w-6xl mx-auto my-10 gap-4" dir='rtl'>
+    <div className="flex flex-col md:flex-row max-w-6xl mx-auto my-10 gap-4 relative" dir='rtl' id="blog">
       <div className="md:w-3/4 space-y-5">
         <h1 className="text-3xl">تشغيل حساب آلي في منصّة بسّام</h1>
         <img src="/img.jpg" className="w-full rounded-box" alt="hello" />
@@ -17,25 +47,20 @@ function BlogIdPage() {
             <span>10-12-2022</span>
           </li>
         </ul>
-        <p className="text-lg text-base-content/70">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque inventore beatae possimus temporibus quam accusantium sint eos quibusdam tempore animi harum praesentium delectus, tempora impedit magnam vel? Unde doloribus quas cumque voluptates repudiandae itaque esse. Omnis obcaecati enim nesciunt modi tenetur rem dolorum aliquam quod error harum ea assumenda vero, reprehenderit eum. Hic quod corporis dolorum consequatur tempora. Harum ipsa laudantium quasi ullam quibusdam nemo deleniti? Corrupti ducimus alias, et optio praesentium nisi molestias, eveniet tenetur voluptas nihil exercitationem ipsa similique pariatur vero? Deserunt eum ad nesciunt numquam, quibusdam consectetur architecto fuga. Minima repudiandae, aut distinctio quidem, molestias fuga vitae, asperiores perferendis quos quod totam culpa tempora reiciendis voluptatibus aliquam. Expedita odio eveniet blanditiis. Quae enim perferendis sint, distinctio rem minus sit voluptates eligendi esse consectetur ut, consequuntur, dolor vero! Accusantium nisi libero inventore voluptatem veniam non soluta asperiores quae. Reiciendis magni iste eveniet deleniti quam nesciunt veniam temporibus exercitationem alias optio nostrum voluptas vitae error illum quos, officia minus, tempora ut a, quaerat ducimus omnis perferendis in. Repudiandae culpa maxime placeat nostrum? Saepe magnam ex esse numquam quis similique molestias eius officiis, inventore itaque deserunt doloribus velit distinctio harum? Inventore impedit ab dolores, rerum error aut possimus, accusantium corporis maxime quia eius, non ad ut. Delectus provident impedit qui maiores, consequuntur quo deserunt eum reprehenderit sapiente repudiandae, natus praesentium ullam ex in temporibus quaerat possimus? Praesentium tempore sunt et neque laborum repellendus dicta molestias odio similique architecto minus quidem suscipit a, ullam quos voluptatem possimus ut debitis rerum consectetur qui harum? Incidunt nesciunt necessitatibus numquam dolor labore mollitia laboriosam recusandae exercitationem maxime magnam molestiae reprehenderit quas modi inventore, dolore vitae fugit nihil vero quos laudantium totam nam reiciendis. Modi aliquid reprehenderit cupiditate, vel id culpa magni enim ratione velit aspernatur optio, quasi totam deserunt veritatis porro tempora maiores! Molestiae vitae corrupti nostrum nam repellat expedita corporis quasi qui animi, accusantium ipsa eaque ad, magnam maiores illo aliquam iste voluptates ea ipsum provident aspernatur? Doloremque, fuga aliquid at asperiores sequi in distinctio commodi deleniti voluptas aut inventore magnam eveniet nisi harum odio cum fugit provident accusamus nobis labore! Aperiam modi ullam nostrum sapiente totam, fugiat, fugit deleniti veritatis iste numquam reprehenderit optio assumenda illum enim voluptate commodi similique libero rem ex magnam. Delectus fuga laboriosam sequi amet distinctio ea architecto dolorum commodi autem! Est quis, quod fugiat commodi porro ducimus praesentium ipsam reiciendis distinctio minus vero autem quam impedit iusto rem quo alias dicta omnis aut natus in itaque. Porro voluptatem facere earum explicabo tempore quae unde corrupti vitae consequuntur perferendis, voluptates nostrum ipsam laborum nulla eos. Ut commodi suscipit sequi ex eligendi assumenda eos cumque consequuntur, exercitationem maxime quas doloremque laudantium quam, incidunt accusantium dicta cupiditate iusto nulla vero explicabo perferendis! Vitae vel quos nisi, qui odio in tenetur error numquam esse, eum nemo est aperiam molestiae voluptatibus impedit soluta sapiente, tempore perferendis reprehenderit optio minus sed quia quisquam debitis. Corporis magni dolorum perspiciatis voluptatem enim assumenda reiciendis minus dolor, consequuntur veritatis corrupti tempora eligendi doloribus? Error, porro voluptate.</p>
+        <MarkdownEditor.Markdown source={MD_DATA} />
         <div className="border-t border-base-content/10 pt-4">
           <h2 className="text-2xl mb-6 text-primary underline underline-offset-4">مقالات مشابهة</h2>
-        <div className="grid grid-cols-2 md:grid-cols-none md:flex md:flex-row md:flex-wrap gap-2">
-          <BlogSmall />
-          <BlogSmall />
-          <BlogSmall />
-          <BlogSmall />
-          <BlogSmall />
-          <BlogSmall />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Blog e={45312}/>
+          <Blog e={945}/>
+          <Blog e={485}/>
+          <Blog e={458}/>
+          <Blog e={458}/>
+          <Blog e={445}/>
         </div>
       </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-none md:flex md:flex-col gap-2 border-s border-base-content/10 ps-4">
-        <h2 className="text-2xl mb-6 col-span-full text-primary underline underline-offset-4">أحدث المقالات</h2>
-        <BlogSmall />
-        <BlogSmall />
-        <BlogSmall />
-      </div>
+      <ScrollSpy ids={ids} elements={elements}/>
     </div>
   )
 }

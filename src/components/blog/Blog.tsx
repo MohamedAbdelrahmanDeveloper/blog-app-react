@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom'
-
 type Props = {
     e: number,
     className?: string
 }
-
 function Blog({e, className}: Props) {
   return (
     <div className={`${className} card bg-base-100 shadow-xl`}>
@@ -14,7 +12,7 @@ function Blog({e, className}: Props) {
               <Link to={`/user/${e}`} >
                 <div className="avatar">
                   <div className="w-10 h-10 rounded-full">
-                    <img src="https://png.pngtree.com/png-clipart/20201128/ourlarge/pngtree-boy-avatar-png-image_2431606.jpg" />
+                    <img src="https://png.pngtree.com/png-clipart/20201128/ourlarge/pngtree-boy-avatar-png-image_2431606.jpg" alt='hello'/>
                   </div>
                 </div>
               </Link>
