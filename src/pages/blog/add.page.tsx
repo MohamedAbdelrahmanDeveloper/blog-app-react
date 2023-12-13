@@ -36,9 +36,9 @@ function AddBlog() {
   return (
     <div className="min-h-screen max-w-5xl mx-auto space-y-5">
         <div className="flex flex-col md:flex-row gap-5">
-          <div className={`card bg-primary md:w-64 overflow-hidden rounded  ${typeof imagePreview != "string" ? "h-64" : 'max-h-64'}`}>
+          <div onClick={handelFileInputClick} className={`card bg-primary md:w-64 overflow-hidden rounded  ${typeof imagePreview != "string" ? "h-64" : 'max-h-64'}`}>
             {typeof imagePreview === "string" ? <img src={imagePreview} alt="Preview" className="w-full h-full" />:
-            <div onClick={handelFileInputClick} className="flex items-center justify-center h-full w-full">
+            <div className="flex items-center justify-center h-full w-full">
               <h4 className="text-4xl text-base-100/50">Photo</h4>
             </div>}
           </div>
