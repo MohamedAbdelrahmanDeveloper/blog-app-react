@@ -75,6 +75,7 @@ function HeaderApp() {
                     })}
                 </ul>
               </div>
+              <a className='btn btn-ghost' href="https://github.com/m7md0a"><i className='bi bi-github text-xl'></i></a>
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
