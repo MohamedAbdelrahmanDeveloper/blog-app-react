@@ -10,6 +10,10 @@ import BlogPage from './pages/blog/blog.page';
 import BlogIdPage from './pages/blog/blogId.page';
 import ConditionalRoute from './auth/isUser';
 import AddBlog from './pages/blog/add.page';
+import LoginPage from './pages/auth/login.page';
+import RegisterPage from './pages/auth/register.page';
+import EditBlog from './pages/blog/edit.page';
+import ProfilePage from './pages/profile/profile.page';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,8 +30,13 @@ root.render(
           <Routes>
             <Route path="/" element={<ConditionalRoute condition={true} redirectTo='/blog'><Home /></ConditionalRoute>}/>
             <Route path="/blog" element={<BlogPage />}/>
+            <Route path="/auth/login" element={<LoginPage />}/>
+            <Route path="/auth/register" element={<RegisterPage />}/>
+            {/* <Route path="/blog" element={<BlogPage />}/> */}
             <Route path="/blog/add" element={<AddBlog />}/>
+            <Route path="/blog/edit/:id" element={<EditBlog />}/>
             <Route path="/blog/:id" element={<BlogIdPage />}/>
+            <Route path="/profile/:id" element={<ProfilePage />}/>
             <Route path="*" element={<NotFoundPage />}/>
           </Routes>
         </main>

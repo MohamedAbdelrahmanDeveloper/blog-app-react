@@ -9,7 +9,24 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 ![hello](https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&lazy=load)
 ![hello](/img.jpg)
 
-<code>hai</code>
+<pre class="language-css" dir="ltr">
+<code class="language-css">
+dd  {
+	color: red
+}
+bg-[color-mix(in_oklab,oklch(var(--p)),black_7%)]
+│              │       │
+│              │       │
+│              │       │
+│              │       ╰── black with 7% opacity = 7% darker
+│              │
+│              ╰── primary color
+│
+╰── OKLAB gives a better result
+</code>
+</pre>
+<code>
+</code>
 
 <h1 id="hellooo">hmoa</h1>
 

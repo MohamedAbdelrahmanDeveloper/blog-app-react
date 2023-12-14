@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html {
+    --color-canvas-subtle: var(--fallback-b3,oklch(var(--b3)/1)) !important;
     scroll-padding-top: 80px;
 }
 
@@ -20,10 +21,9 @@ html:not([data-theme='light']) .wmde-markdown-color {
     --color-fg-muted: var(--fallback-bc,oklch(var(--bc)/0.8)) !important;
     --color-fg-subtle: #6e7781 !important;
     --color-canvas-default: var(--fallback-b1,oklch(var(--b1)/1)) !important;
-    --color-canvas-subtle: var(--fallback-bc,oklch(var(--bc)/0.2)) !important;
+    --color-canvas-subtle: var(--fallback-b3,oklch(var(--b3)/1)) !important;
     @apply bg-base-100 !important
 }
-
 
 .wmde-markdown * {
     @apply border-base-content/50 !important
@@ -37,7 +37,11 @@ html:not([data-theme='light']) .wmde-markdown-color {
     @apply border-base-content/20 !important
 }
 
+.wmde-markdown blockquote {
+    @apply bg-warning/30 p-2 !important
+}
+
 [dir="rtl"] .wmde-markdown blockquote {
     border-left: 0px !important;
-    @apply border-s-4 bg-warning/30 p-2 !important
+    @apply border-s-4 !important
 }
