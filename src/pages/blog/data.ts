@@ -5,6 +5,22 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 # Files
 
+
+![hello](https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&lazy=load)
+![hello](/img.jpg)
+
+<code>hai</code>
+
+<h1 id="hellooo">hmoa</h1>
+
+| العمود 1 | العمود 2 | dd |
+| ----- | --- | --- |
+| ![hello](/img.jpg)     | ![hello](/img.jpg)  | ![hello](/img.jpg) 
+| ![hello](/img.jpg)     | ![hello](/img.jpg)  | ![hello](/img.jpg) 
+| ![hello](/img.jpg)     | ![hello](https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load)  | ![hello](/img.jpg) 
+
+
+
 StackEdit stores *jj* files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
 ## Create files and folders

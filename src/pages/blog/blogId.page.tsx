@@ -5,12 +5,24 @@ import ScrollSpy from '../../components/blog/ScrollSpy';
 import { MD_DATA } from "./data";
 
 
-function BlogIdPage() {
-  const [elements, setElements] = useState<any>([])
-  const [ids, setIds] = useState<any>([])
+export type ElementsType = {
+  id: string;
+  tag: string;
+  text: string;
+}
 
-  const getIdsFromElements = (elements: []):[] => {
-    const newElements:any = []
+export type IdsType = {
+  id: string;
+  tag: string;
+  text: string;  
+}
+
+function BlogIdPage() {
+  const [elements, setElements] = useState<ElementsType[]>([])
+  const [ids, setIds] = useState<IdsType[]>([])
+
+  const getIdsFromElements = (elements: ElementsType[]): IdsType[] => {
+    const newElements:IdsType[] = []
     elements.forEach((e:any) => {
       newElements.push(e.id)
     })
@@ -19,11 +31,12 @@ function BlogIdPage() {
 
   useEffect(() => {
     let element = document.querySelector('#blog .wmde-markdown')
-    let newElements: any = []
+    let newElements: ElementsType[] = []
     if (element?.children.length && element?.children.length > 0) {
-      Array.from(element?.children).forEach(e => {
+      Array.from(element?.children).forEach((e: Element) => {
         if (e.tagName[0] === 'H') {
-          newElements.push({id: e.id,tag: e.tagName, text: e.textContent})
+          // @ts-ignore
+          newElements.push({id: e.id, tag: e.tagName, text: e.textContent})
         }
       })
     }
@@ -47,7 +60,7 @@ function BlogIdPage() {
             <span>10-12-2022</span>
           </li>
         </ul>
-        <MarkdownEditor.Markdown source={MD_DATA} />
+        <MarkdownEditor.Markdown className='ps-1 pe-4' source={MD_DATA} />
         <div className="border-t border-base-content/10 pt-4">
           <h2 className="text-2xl mb-6 text-primary underline underline-offset-4">مقالات مشابهة</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

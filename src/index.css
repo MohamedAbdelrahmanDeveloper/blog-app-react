@@ -24,11 +24,20 @@ html:not([data-theme='light']) .wmde-markdown-color {
     @apply bg-base-100 !important
 }
 
+
 .wmde-markdown * {
     @apply border-base-content/50 !important
 }
 
+.wmde-markdown img {
+    @apply w-full py-1 !important
+}
+
+#modal-root * {
+    @apply border-base-content/20 !important
+}
+
 [dir="rtl"] .wmde-markdown blockquote {
     border-left: 0px !important;
-    @apply border-s-4 !important
+    @apply border-s-4 bg-warning/30 p-2 !important
 }

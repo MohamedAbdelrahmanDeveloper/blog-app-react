@@ -22,6 +22,7 @@ root.render(
           <HeaderApp />
         </div>
         <main className='min-h-[83vh] mx-4 mt-24' >
+          <div id='modal-root'></div>
           <Routes>
             <Route path="/" element={<ConditionalRoute condition={true} redirectTo='/blog'><Home /></ConditionalRoute>}/>
             <Route path="/blog" element={<BlogPage />}/>

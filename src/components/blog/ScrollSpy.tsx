@@ -1,4 +1,6 @@
-function ScrollSpy({ids, elements}: {ids : [string], elements: []}) {
+import { ElementsType, IdsType } from "../../pages/blog/blogId.page"
+
+function ScrollSpy({ids, elements}: {ids : IdsType[], elements: ElementsType[]}) {
   return (
     <div>
         {ids && ids.length > 0 &&
