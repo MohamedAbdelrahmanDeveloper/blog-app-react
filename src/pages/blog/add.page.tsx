@@ -7,14 +7,16 @@ import FileInput from "../../components/form/FileInput";
 function AddBlog() {
   const [text, setText] = useState<string>('')    
   const [title, setTitle] = useState<string>('')
+  const [description, setDescription] = useState<string>('')
   const [file, setFile] = useState<File>()
   const [imagePreview, setImagePreview] = useState<string | ArrayBuffer | null>(null);
   const inputFileRef = useRef<HTMLInputElement>(null)
 
   const handelForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (title && text && file) {
+    if (title && description && text && file) {
       console.log(title);
+      console.log(description);
       console.log(text);
       console.log(file);
     }
@@ -36,7 +38,7 @@ function AddBlog() {
             <h1 className="text-2xl">Title: <span className="font-bold text-primary">{title}</span></h1>
             <form onSubmit={handelForm} className="flex flex-col gap-4">
               <Input required auth setData={setTitle} type="text" className="w-full" placeholder="Blog title"/>
-              <Textarea required min={5} max={30} setData={setTitle} className="w-full" placeholder="Description"/>
+              <Textarea required min={5} max={30} setData={setDescription} className="w-full" placeholder="Description"/>
               <FileInput ref={inputFileRef} accept="image/*" setFile={setFile} setImagePreview={setImagePreview} className="hidden" />
               <button className="btn btn-primary">Publish</button> 
             </form>
