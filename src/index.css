@@ -45,3 +45,11 @@ html:not([data-theme='light']) .wmde-markdown-color {
     border-left: 0px !important;
     @apply border-s-4 !important
 }
+
+.section-title {
+    @apply text-3xl font-bold text-primary
+}
+
+.section-title span {
+    @apply border-b-2 border-primary
+}

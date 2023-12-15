@@ -50,7 +50,7 @@ function BlogIdPage() {
       <div className="md:w-3/4 space-y-5">
         <div className='flex justify-between items-center'>
           <h1 className="text-3xl">Lorem ipsum dolor sit amet</h1>
-          <Link to={`/blog/edit/${4}`} className='btn btn-ghost'>Edit  this blog<i className="bi bi-pen"></i></Link>
+          <Link to={`/app/blog/edit/${4}`} className='btn btn-ghost'>Edit  this blog<i className="bi bi-pen"></i></Link>
         </div>
         <img src="/img.jpg" className="w-full rounded-box" alt="hello" />
         <p className="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum harum sed facilis voluptatum fugiat est.</p>
@@ -68,14 +68,12 @@ function BlogIdPage() {
         <div className="border-t border-base-content/10 pt-4 space-y-5">
           <div className="join flex justify-between w-full">
             <button className="join-item btn btn-outline">
-              <i className="bi bi-chevron-compact-left rtl:hidden"></i>
-              <i className="bi bi-chevron-compact-right ltr:hidden"></i>
+              <i className="bi bi-chevron-compact-left rtl:rotate-180"></i>
               <span>Previous blog</span>
             </button>
             <button className="join-item btn btn-outline">
               <span>Next blog </span>
-              <i className="bi bi-chevron-compact-right rtl:hidden"></i>
-              <i className="bi bi-chevron-compact-left ltr:hidden"></i>
+              <i className="bi bi-chevron-compact-right rtl:rotate-180"></i>
             </button>
           </div>
           <h2 className="text-2xl mb-6 text-primary underline underline-offset-4">مقالات مشابهة</h2>

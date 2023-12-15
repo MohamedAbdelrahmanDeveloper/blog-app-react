@@ -11,7 +11,7 @@ function Blog({e, className}: Props) {
           <div className="dropdown dropdown-end absolute top-0 end-1">
             <div tabIndex={e} role="button" className="btn btn-sm bg-opacity-70 ring-0 border-0 m-1"><i className="bi bi-three-dots-vertical"></i></div>
               <ul tabIndex={e} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                <li><Link to={`/blog/edit/${e}`}>Edit {e}</Link></li>
+                <li><Link to={`/app/blog/edit/${e}`}>Edit {e}</Link></li>
                 <li><DeleteModal /></li>
                 <li><a>Report</a></li>
               </ul>
@@ -33,12 +33,11 @@ function Blog({e, className}: Props) {
               </div>
             </div>
             <h2 className='card-title text-base-content/80'>
-              <Link to={`/blog/${e}`} >Lorem ipsum dolor sit</Link>
+              <Link to={`/app/blog/${e}`} >Lorem ipsum dolor sit</Link>
             </h2>
             <p className='text-base-content/50'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, maiores</p>
             <div className="card-actions justify-end">
-            <Link to={`/blog/${e}`} className="btn btn-sm btn-primary">قراءة المزيد..</Link>
-            {/* <button className="btn btn-primary">Read More..</button> */}
+            <Link to={`/app/blog/${e}`} className="btn btn-sm btn-primary">read more..</Link>
             </div>
         </div>
     </div>
