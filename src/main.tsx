@@ -9,9 +9,8 @@ import LoadingPage from './pages/Loading/loading.page';
 import AppLayout from './components/layout/app.layout';
 import DashboardLayout from './components/layout/dashboard.layout';
 
-const DashboardPage = lazy(() => import('./pages/dashboard/dashboard.page'));
-const NotFoundPage = lazy(() => import('./pages/404/404'));
 
+const NotFoundPage = lazy(() => import('./pages/404/404'));
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
