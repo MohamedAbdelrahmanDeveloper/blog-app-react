@@ -47,12 +47,12 @@ function HeaderApp() {
               <div className={`flex flex-col md:[&>.btn]:btn-ghost [&>.btn]:w-3/4 md:[&>.btn]:w-auto gap-3 md:flex-row items-center absolute h-screen md:h-auto md:relative w-3/5 -translate-x-full duration-300 md:duration-0 md:translate-x-0 ${sidebar && 'translate-x-0'} md:w-auto z-10 top-0 left-0 bg-base-100 md:bg-base-100`}>
                   <Link className="btn btn-ghost text-xl" to='/'>Blog App</Link>
                   <Link className='btn btn-sm rounded-btn' to='/'>Home</Link>
-                  <Link className='btn btn-sm rounded-btn' to='/app/blog'>Blog</Link>
-                  <Link className='btn btn-sm rounded-btn' to='/app/blog/add'>Add blog</Link>
+                  <Link className='btn btn-sm rounded-btn' to='/blog'>Blog</Link>
+                  <Link className='btn btn-sm rounded-btn' to='/blog/add'>Add blog</Link>
                   <Link className='btn btn-sm rounded-btn' to='/login'>Login</Link>
                   <Link className='btn btn-sm rounded-btn' to='/register'>Register</Link>
-                  <Link className='btn btn-sm rounded-btn' to='/app/profile/1'>Profile</Link>
-                  <Link className='btn btn-sm rounded-btn' to='/app/dashboard'>Dashboard</Link>
+                  <Link className='btn btn-sm rounded-btn' to='/profile/1'>Profile</Link>
+                  <Link className='btn btn-sm rounded-btn' to='/dashboard'>Dashboard</Link>
                </div>
             </div>
             <div className="gap-x-2">

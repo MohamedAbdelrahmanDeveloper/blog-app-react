@@ -50,7 +50,7 @@ function BlogIdPage() {
       <div className="md:w-3/4 space-y-5">
         <div className='flex justify-between items-center'>
           <h1 className="text-3xl">Lorem ipsum dolor sit amet</h1>
-          <Link to={`/app/blog/edit/${4}`} className='btn btn-ghost'>Edit  this blog<i className="bi bi-pen"></i></Link>
+          <Link to={`/blog/edit/${4}`} className='btn btn-ghost'>Edit  this blog<i className="bi bi-pen"></i></Link>
         </div>
         <img src="/img.jpg" className="w-full rounded-box" alt="hello" />
         <p className="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum harum sed facilis voluptatum fugiat est.</p>

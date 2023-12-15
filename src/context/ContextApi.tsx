@@ -52,7 +52,7 @@ export const AppWrapper = ({children}: {children: React.ReactNode}) => {
         state,
         dispatch
     }}>
-        <div className="container mx-auto">
+        <div>
             {children}
         </div>
     </AppContext.Provider>
