@@ -21,18 +21,14 @@ module.exports = {
       "dark",
       "cupcake",
       "bumblebee",
+      "black",
       "emerald",
       "corporate",
       "synthwave",
-      "aqua",
       "lofi",
-      "pastel",
       "fantasy",
-      "wireframe",
-      "black",
       "luxury",
-      "dracula",
-      "retro"
+      "dracula"
     ],
   },
 }
