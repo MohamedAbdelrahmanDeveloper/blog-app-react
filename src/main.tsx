@@ -21,7 +21,7 @@ root.render(
     <AppWrapper>
       <BrowserRouter>
           <div id='modal-root'></div>
-          <div className='mx-4'>
+          <div>
             <Routes>
               {/* <Route path="/" element={<ConditionalRoute condition={true} redirectTo='/blog/blog'><Home /></ConditionalRoute>}/> */}
               <Route path="/*" element={<AppLayout />}/>

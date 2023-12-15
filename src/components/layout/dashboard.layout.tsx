@@ -1,21 +1,41 @@
-import { Route, Routes } from "react-router-dom"
+import { Link, Route, Routes } from "react-router-dom"
 
 import { lazy } from "react"
+import HeaderDashboard from "../dashboard/Header.dashboard";
 
 const DashboardPage = lazy(() => import("../../pages/dashboard/dashboard.page"));
 const NotFoundPage = lazy(() => import("../../pages/404/404"))
 
 function DashboardLayout() {
   return (
-    <main>
-        sidebar
-        <div className="min-h-[83vh] mx-4 mt-24">
-            <Routes>
-                <Route path="/" element={<DashboardPage />}/>
-                <Route path="*" element={<NotFoundPage />}/>
-            </Routes>           
-        </div>
-        footer
+    <main className="drawer lg:drawer-open">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content bg-base-200 relative">
+                <div className='sticky -top-1 left-0 w-full z-30'>
+                    <HeaderDashboard />
+                </div>
+                <Routes>
+                    <Route path="/" element={<DashboardPage />}/>
+                    <Route path="*" element={<NotFoundPage />}/>
+                </Routes>
+            </div> 
+            <div className="drawer-side z-30">
+                <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
+                <ul className="menu p-4 w-80 min-h-full bg-base-100 text-base-content space-y-2">
+                    <li>
+                        <Link to="/" className="text-lg">
+                            <i className="bi bi-house"></i>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/dashboard" className="text-lg">
+                            <i className="bi bi-window-dash"></i>
+                            Dashboard
+                        </Link>
+                    </li>
+                </ul>
+            </div>
     </main>
   )
 }
