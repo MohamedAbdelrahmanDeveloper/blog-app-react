@@ -1,3 +1,8 @@
+import BarChart from "./BarChart"
+import LineChart from "./LineChart"
+import DoughnutChart from "./DoughnutChart"
+import OneLineChart from "./OneLineChart"
+
 function DashboardPage() {
     return (
         <section className="space-y-5">
@@ -35,37 +40,27 @@ function DashboardPage() {
                     </div>
                 </div>
             </section>
-            <section className="hidden md:flex gap-4">
+            <section className="flex flex-col md:flex-row gap-4">
                 <div className="card bg-base-100 w-full">
                     <div className="card-body">
-                        Add blog
+                        <BarChart />
                     </div>
                 </div>
                 <div className="card bg-base-100 w-full">
                     <div className="card-body">
-                        Add blog
-                    </div>
-                </div>
-                <div className="card bg-base-100 w-full">
-                    <div className="card-body">
-                        Add blog
+                       <LineChart />
                     </div>
                 </div>
             </section>
-            <section className="hidden md:flex gap-4">
+            <section className="flex flex-col md:flex-row gap-4">
                 <div className="card bg-base-100 w-full">
                     <div className="card-body">
-                        Add blog
+                        <OneLineChart />
                     </div>
                 </div>
                 <div className="card bg-base-100 w-full">
                     <div className="card-body">
-                        Add blog
-                    </div>
-                </div>
-                <div className="card bg-base-100 w-full">
-                    <div className="card-body">
-                        Add blog
+                        <DoughnutChart />
                     </div>
                 </div>
             </section>
