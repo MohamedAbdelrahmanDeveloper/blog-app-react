@@ -53,3 +53,11 @@ html:not([data-theme='light']) .wmde-markdown-color {
 .section-title span {
     @apply border-b-2 border-primary
 }
+
+.navbar .btn.btn-md.rounded-btn.active{
+    @apply btn-primary md:btn-ghost md:border-b-2 md:border-b-primary/60 md:rounded-b-none
+}
+
+.drawer-side .menu li > *:not(ul):not(.menu-title):not(details):active, .drawer-side .menu li > *:not(ul):not(.menu-title):not(details).active, .drawer-side .menu li > details > summary:active {
+    @apply bg-primary
+}

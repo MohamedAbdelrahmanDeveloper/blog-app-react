@@ -1,4 +1,4 @@
-import { ElementsType, IdsType } from "../../pages/blog/blogId.page"
+import { ElementsType, IdsType } from "../../pages/blog/articleId.page"
 
 function ScrollSpy({ids, elements}: {ids : IdsType[], elements: ElementsType[]}) {
   return (

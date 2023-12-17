@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function AuthorCard() {
   return (
     <div className="shadow rounded-box md:w-72 flex flex-col items-center text-center space-y-1 p-4">
-        <Link to={`/user/s`} >
+        <Link to={`/profile/mohamed`} >
             <div className="avatar">
             <div className="w-32 h-32 rounded-full">
                 <img src="https://png.pngtree.com/png-clipart/20201128/ourlarge/pngtree-boy-avatar-png-image_2431606.jpg" alt="hello" />
@@ -12,7 +12,7 @@ function AuthorCard() {
         </Link>
         <div>
             <h2 className="text-xl">Mohamed</h2>
-            <span className="text-base-content/75 -mt-5">@modev</span>
+            <Link to={`/profile/mohamed`} className="text-base-content/75 -mt-5">@modev</Link>
         </div>
         <p className="text-base-content/50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur illo, illum tempore repudiandae placeat qui sint reprehenderit quasi repellendus. Dicta magni qui odio nam aliquam?</p>
         <div className="grid grid-flow-col gap-4 text-base-content/75">

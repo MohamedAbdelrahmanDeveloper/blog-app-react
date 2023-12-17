@@ -8,8 +8,8 @@ import { MD_DATA } from "./data";
 
 function EditBlog() {
   const [text, setText] = useState<string>(MD_DATA)    
-  const [title, setTitle] = useState<string>('This is title blog')
-  const [description, setDescription] = useState<string>('This is description blog')
+  const [title, setTitle] = useState<string>('This is title article')
+  const [description, setDescription] = useState<string>('This is description article')
   const [file, setFile] = useState<File>()
   const [imagePreview, setImagePreview] = useState<string | ArrayBuffer | null>(null);
   const inputFileRef = useRef<HTMLInputElement>(null)

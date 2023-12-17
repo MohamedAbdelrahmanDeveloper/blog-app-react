@@ -1,11 +1,11 @@
-import { Link, Route, Routes } from "react-router-dom"
+import { NavLink, Route, Routes } from "react-router-dom"
 
 import { lazy } from "react"
-import HeaderDashboard from "../dashboard/Header.dashboard";
+import HeaderDashboard from "../Header/Header.dashboard";
 
 const DashboardPage = lazy(() => import("../../pages/dashboard/dashboard.page"));
 const UsersPage = lazy(() => import("../../pages/dashboard/users.page"));
-const BlogsDashboardPage = lazy(() => import("../../pages/dashboard/blogs.page"));
+const BlogsDashboardPage = lazy(() => import("../../pages/dashboard/articles.page"));
 const NotFoundPage = lazy(() => import("../../pages/404/404"))
 
 function DashboardLayout() {
@@ -20,36 +20,36 @@ function DashboardLayout() {
                     <Routes>
                         <Route path="/" element={<DashboardPage />}/>
                         <Route path="/users" element={<UsersPage />}/>
-                        <Route path="/blogs" element={<BlogsDashboardPage />}/>
+                        <Route path="/articles" element={<BlogsDashboardPage />}/>
                         <Route path="*" element={<NotFoundPage />}/>
                     </Routes>
                 </div>
             </div> 
             <div className="drawer-side z-30">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
-                <ul className="menu p-4 w-80 min-h-full bg-base-100 text-base-content space-y-2">
-                    <li>
-                        <Link to="/" className="text-xl font-bold btn btn-ghost justify-start">
+                <ul className="menu p-4 w-64 md:w-80 min-h-full bg-base-100 text-base-content space-y-2 [&>a]:btn-primary">
+                    <div>
+                        <NavLink to="/" end className="text-xl font-bold btn btn-ghost justify-start w-full">
                             Blog App
-                        </Link>
-                    </li>
+                        </NavLink>
+                    </div>
                     <li>
-                        <Link to="/dashboard" className="text-lg">
+                        <NavLink to="/dashboard" end className="text-lg">
                             <i className="bi bi-window-dash"></i>
                             Dashboard
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/dashboard/users" className="text-lg">
+                        <NavLink to="/dashboard/users" end className="text-lg">
                             <i className="bi bi-people"></i>
                             Users
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/dashboard/blogs" className="text-lg">
+                        <NavLink to="/dashboard/articles" className="text-lg">
                             <i className="bi bi-journal"></i>
-                            Dashboard
-                        </Link>
+                            Articles
+                        </NavLink>
                     </li>
                 </ul>
             </div>

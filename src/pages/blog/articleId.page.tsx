@@ -1,5 +1,5 @@
 import MarkdownEditor from '@uiw/react-markdown-editor'
-import Blog from '../../components/blog/Blog'
+import Article from '../../components/blog/Article'
 import { useEffect, useState } from 'react';
 import ScrollSpy from '../../components/blog/ScrollSpy';
 import { MD_DATA } from "./data";
@@ -31,7 +31,7 @@ function BlogIdPage() {
   }
 
   useEffect(() => {
-    let element = document.querySelector('#blog .wmde-markdown')
+    let element = document.querySelector('#article .wmde-markdown')
     let newElements: ElementsType[] = []
     if (element?.children.length && element?.children.length > 0) {
       Array.from(element?.children).forEach((e: Element) => {
@@ -46,11 +46,11 @@ function BlogIdPage() {
   }, [])
   
   return (
-    <div className="flex flex-col md:flex-row max-w-6xl mx-auto my-10 gap-4 relative" id="blog">
+    <div className="flex flex-col md:flex-row max-w-6xl mx-auto my-10 gap-4 relative" id="article">
       <div className="md:w-3/4 space-y-5">
-        <div className='flex justify-between items-center'>
+        <div className='flex flex-col items-start md:flex-row justify-between md:items-center'>
           <h1 className="text-3xl">Lorem ipsum dolor sit amet</h1>
-          <Link to={`/blog/edit/${4}`} className='btn btn-ghost'>Edit  this blog<i className="bi bi-pen"></i></Link>
+          <Link to={`/articles/edit/${4}`} className='btn btn-ghost'>Edit  this article<i className="bi bi-pen"></i></Link>
         </div>
         <img src="/img.jpg" className="w-full rounded-box" alt="hello" />
         <p className="text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum harum sed facilis voluptatum fugiat est.</p>
@@ -67,23 +67,23 @@ function BlogIdPage() {
         <MarkdownEditor.Markdown className='ps-1 pe-4' source={MD_DATA} />
         <div className="border-t border-base-content/10 pt-4 space-y-5">
           <div className="join flex justify-between w-full">
-            <button className="join-item btn btn-outline">
+            <Link to={'/articles/14'} className="join-item btn btn-outline">
               <i className="bi bi-chevron-compact-left rtl:rotate-180"></i>
-              <span>Previous blog</span>
-            </button>
-            <button className="join-item btn btn-outline">
-              <span>Next blog </span>
+              <span>Previous article</span>
+            </Link>
+            <Link to={'/articles/15'} className="join-item btn btn-outline">
+              <span>Next article </span>
               <i className="bi bi-chevron-compact-right rtl:rotate-180"></i>
-            </button>
+            </Link>
           </div>
-          <h2 className="text-2xl mb-6 text-primary underline underline-offset-4">مقالات مشابهة</h2>
+          <h2 className="section-title"><span>Similar Articles</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Blog e={45312}/>
-          <Blog e={945}/>
-          <Blog e={485}/>
-          <Blog e={458}/>
-          <Blog e={458}/>
-          <Blog e={445}/>
+          <Article e={45312}/>
+          <Article e={945}/>
+          <Article e={485}/>
+          <Article e={458}/>
+          <Article e={458}/>
+          <Article e={445}/>
         </div>
       </div>
       </div>

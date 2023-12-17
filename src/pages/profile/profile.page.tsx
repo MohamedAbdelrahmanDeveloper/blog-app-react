@@ -1,4 +1,4 @@
-import Blog from "../../components/blog/Blog"
+import Article from "../../components/blog/Article"
 
 function ProfilePage() {
   return (
@@ -38,16 +38,16 @@ function ProfilePage() {
             </div>
         </div>
         <div>
-            <h1 className="text-2xl text-primary font-bold underline underline-offset-1">Blogs</h1>
-            <div className="grid md:grid-cols-2 gap-4 my-5">
-                <Blog e={45}/>
-                <Blog e={45}/>
-                <Blog e={45}/>
-                <Blog e={45}/>
+            <h1 className="text-2xl text-primary font-bold underline underline-offset-1">Articles</h1>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 my-5">
+                <Article e={45}/>
+                <Article e={45}/>
+                <Article e={45}/>
+                <Article e={45}/>
             </div>
         </div>
         <div className="flex items-center justify-center h-[50vh]">
-            <h2 className="text-2xl text-base-content/80">This user not have blogs yet!</h2>
+            <h2 className="text-2xl text-base-content/80">This user not have articles yet!</h2>
         </div>
     </section>
   )

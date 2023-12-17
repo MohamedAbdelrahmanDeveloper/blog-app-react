@@ -9,6 +9,7 @@ import {
   ChartOptions,
 } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import Card from '../glopal/Card';
 
 ChartJS.register(ArcElement, Tooltip, Legend,
     Tooltip,
@@ -56,7 +57,9 @@ function DoughnutChart(){
       } as ChartData<'doughnut'>;
 
     return(
-      <Doughnut options={options} data={data} />
+      <Card>
+        <Doughnut options={options} data={data} />
+      </Card>
     )
 }
 

@@ -8,7 +8,7 @@ function DeleteModal() {
   return (
     <Modal modal={modal} setModal={setModal} title="Delete" textBtn="Remove" classBtn="w-full">
       <Modal.Body>
-          <div className="py-4">Do you sure delete your blog?</div>
+          <div className="py-4">Do you sure delete your article?</div>
       </Modal.Body>
       <Modal.Footer>
           <button onClick={()=> setModal(!modal)} className='btn btn-sm md:btn-md mt-4 md:col-span-2 btn-primary'>No</button>

@@ -45,10 +45,10 @@ function Features() {
           <div className="card md:card-side bg-black/80 text-neutral-content shadow-xl md:w-3/4 md:h-52 rounded-box">
             <figure className="md:w-52 h-full"><img className="w-full h-full" src="https://www.edarabia.com/ar/wp-content/uploads/2017/12/5-of-the-most-important-benefits-of-reading.jpg.webp" alt="Movie"/></figure>
             <div className="card-body md:w-2/4">
-              <h2 className="card-title">Welcome to My Blogs</h2>
+              <h2 className="card-title">Welcome to My Articles</h2>
               <p>Enjoy reading the latest articles and stay updated with the latest news and updates</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Blogs</button>
+                <button className="btn btn-primary">Articles</button>
               </div>
             </div>
           </div>

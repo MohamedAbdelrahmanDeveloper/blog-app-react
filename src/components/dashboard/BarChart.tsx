@@ -13,6 +13,7 @@ import type { ChartData, ChartOptions} from 'chart.js';
 
 
 import { Bar } from 'react-chartjs-2';
+import Card from '../glopal/Card';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 function BarChart(){
@@ -32,7 +33,7 @@ function BarChart(){
         labels,
         datasets: [
           {
-            label: 'Blogs',
+            label: 'Articles',
             data: labels.map(() => { return Math.random() * 1000 + 500 }),
             backgroundColor: 'rgba(255, 99, 132, 1)',
           },
@@ -45,7 +46,9 @@ function BarChart(){
       } as ChartData<'bar'>;
 
     return(
-      <Bar options={options} data={data} />
+      <Card >
+        <Bar options={options} data={data} />
+      </Card>
     )
 }
 

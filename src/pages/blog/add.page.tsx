@@ -4,7 +4,7 @@ import Input from "../../components/form/Input";
 import Textarea from "../../components/form/Textarea";
 import FileInput from "../../components/form/FileInput";
 
-function AddBlog() {
+function AddArticle() {
   const [text, setText] = useState<string>('')    
   const [title, setTitle] = useState<string>('')
   const [description, setDescription] = useState<string>('')
@@ -57,4 +57,4 @@ function AddBlog() {
   )
 }
 
-export default AddBlog
+export default AddArticle

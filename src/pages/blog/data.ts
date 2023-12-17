@@ -7,7 +7,6 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 
 ![hello](https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&lazy=load)
-![hello](/img.jpg)
 
 <pre class="language-css" dir="ltr">
 <code class="language-css">
@@ -25,16 +24,14 @@ bg-[color-mix(in_oklab,oklch(var(--p)),black_7%)]
 ╰── OKLAB gives a better result
 </code>
 </pre>
-<code>
-</code>
 
-<h1 id="hellooo">hmoa</h1>
+<h1 id="hellooo">hamo</h1>
 
-| العمود 1 | العمود 2 | dd |
+| text 1 | text 2 | text |
 | ----- | --- | --- |
 | ![hello](/img.jpg)     | ![hello](/img.jpg)  | ![hello](/img.jpg) 
 | ![hello](/img.jpg)     | ![hello](/img.jpg)  | ![hello](/img.jpg) 
-| ![hello](/img.jpg)     | ![hello](https://images.pexels.com/photos/12756665/pexels-photo-12756665.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load)  | ![hello](/img.jpg) 
+| ![hello](/img.jpg)     | ![hello](/img.jpg)  | ![hello](/img.jpg) 
 
 
 
@@ -106,7 +103,7 @@ Publishing in StackEdit makes it simple for you to publish online your files. On
 You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
 
 - Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
+- HTML: publish the file converted to HTML via a Handlebars template (on a article for example).
 
 ## Update a publication
 

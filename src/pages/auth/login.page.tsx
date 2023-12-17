@@ -22,7 +22,7 @@ function LoginPage() {
   return (
     <div>
         <div className="relative flex flex-col justify-center min-h-[83vh] overflow-hidden">
-            <div className="w-full p-6 m-auto bg-base-300 rounded-md shadow-md lg:max-w-lg">
+            <div className="w-full p-6 m-auto bg-base-200 rounded-md shadow-md lg:max-w-lg">
                 <h1 className="text-3xl font-semibold text-center text-primary">Login</h1>
                 <form className="space-y-4 mt-5" onSubmit={handelLogin}>
                     {error && <div className='alert py-2 px-4 alert-warning'>{error}</div>}
@@ -31,7 +31,7 @@ function LoginPage() {
                     <div className='flex justify-center py-2'>
                         <button className='btn btn-primary w-full min-w-xs'>Login</button>
                     </div>
-                    <Link to="/auth/register" className="text-base-content hover:underline hover:text-primary">Create Account ?</Link>
+                    <Link to="/register" className="text-base-content hover:underline hover:text-primary">Create Account ?</Link>
                 </form>
             </div>
         </div>

@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import type { ChartData, ChartOptions } from 'chart.js';
+import Card from '../glopal/Card';
 
 
 ChartJS.register(
@@ -43,7 +44,7 @@ function LineChart(){
   datasets: [
     {
       fill: true,
-      label: 'Blogs',
+      label: 'Articles',
       data: labels.map(() => { return Math.random() * 100 + 500 }),
       borderColor: 'rgb(255, 99, 132)',
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -67,7 +68,9 @@ function LineChart(){
   
 
     return(
-      <Line data={data} options={options}/>
+      <Card>
+        <Line data={data} options={options}/>
+      </Card>
     )
 }
 

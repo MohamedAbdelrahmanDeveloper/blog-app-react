@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/pages/dashboard/articles.page.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

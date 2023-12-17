@@ -11,6 +11,7 @@ import {
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
   import type { ChartData, ChartOptions } from 'chart.js';
+import Card from '../glopal/Card';
   
   
   ChartJS.register(
@@ -24,7 +25,7 @@ import {
     Legend
   );
   
-  function OneLineChart(){
+  function OneLineChart({title}: {title:string}){
   
     const options = {
       responsive: true,
@@ -43,7 +44,7 @@ import {
     datasets: [
       {
         fill: true,
-        label: 'WebSite Visits',
+        label: title,
         data: labels.map(() => { return Math.random() * 100 + 500 }),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -53,7 +54,9 @@ import {
     
   
       return(
-        <Line data={data} options={options}/>
+        <Card>
+          <Line data={data} options={options}/>
+        </Card>
       )
   }
   

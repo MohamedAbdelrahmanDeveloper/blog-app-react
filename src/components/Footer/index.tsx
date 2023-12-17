@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom"
+
 function FooterApp() {
   return (
-    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+  <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
   <nav className="grid grid-flow-col gap-4">
-    <a href='https://github.com/m7md0a' className="link link-hover">About us</a>
-    <a href='https://github.com/m7md0a' className="link link-hover">Contact</a>
-    <a href='https://github.com/m7md0a' className="link link-hover">Jobs</a>
-    <a href='https://github.com/m7md0a' className="link link-hover">Press kit</a>
+    <Link className='link link-hover' to='/'>Home</Link>
+    <Link className='link link-hover' to='/articles'>Articles</Link>
+    <Link className='link link-hover' to='/login'>Login</Link>
+    <Link className='link link-hover' to='/register'>Register</Link>
   </nav> 
   <nav>
     <div className="grid grid-flow-col gap-4">
