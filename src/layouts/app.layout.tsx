@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom"
-import FooterApp from "../Footer"
-import HeaderApp from "../Header"
-
 import { lazy } from "react"
 
+import HeaderApp from "../components/Header";
+import FooterApp from "../components/Footer";
 
-const Home = lazy(() => import('../../pages/Home'));
-const ProfilePage = lazy(() => import('../../pages/profile/profile.page'));
-const LoginPage = lazy(() => import('../../pages/auth/login.page'));
-const RegisterPage = lazy(() => import('../../pages/auth/register.page'));
-const ArticlesPage = lazy(() => import("../../pages/blog/articles.page"))
-const AddArticle = lazy(() => import("../../pages/blog/add.page"))
-const EditArticle = lazy(() => import("../../pages/blog/edit.page"))
-const ArticleIdPage = lazy(() => import("../../pages/blog/articleId.page"))
-const NotFoundPage = lazy(() => import("../../pages/404/404"))
+
+const Home = lazy(() => import('./../pages/Home'));
+const ProfilePage = lazy(() => import('./../pages/profile/profile.page'));
+const LoginPage = lazy(() => import('./../pages/auth/login.page'));
+const RegisterPage = lazy(() => import('./../pages/auth/register.page'));
+const ArticlesPage = lazy(() => import("./../pages/blog/articles.page"))
+const AddArticle = lazy(() => import("./../pages/blog/add.page"))
+const EditArticle = lazy(() => import("./../pages/blog/edit.page"))
+const ArticleIdPage = lazy(() => import("./../pages/blog/articleId.page"))
+const NotFoundPage = lazy(() => import("./../pages/404/404"))
 
 function AppLayout() {
   return (

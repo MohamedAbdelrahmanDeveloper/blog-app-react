@@ -1,12 +1,12 @@
 import { NavLink, Route, Routes } from "react-router-dom"
-
 import { lazy } from "react"
-import HeaderDashboard from "../Header/Header.dashboard";
 
-const DashboardPage = lazy(() => import("../../pages/dashboard/dashboard.page"));
-const UsersPage = lazy(() => import("../../pages/dashboard/users.page"));
-const BlogsDashboardPage = lazy(() => import("../../pages/dashboard/articles.page"));
-const NotFoundPage = lazy(() => import("../../pages/404/404"))
+import HeaderDashboard from "../components/Header/Header.dashboard";
+
+const DashboardPage = lazy(() => import("./../pages/dashboard/dashboard.page"));
+const UsersPage = lazy(() => import("./../pages/dashboard/users.page"));
+const BlogsDashboardPage = lazy(() => import("./../pages/dashboard/articles.page"));
+const NotFoundPage = lazy(() => import("./../pages/404/404"))
 
 function DashboardLayout() {
   return (

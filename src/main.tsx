@@ -5,8 +5,8 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LoadingPage from './pages/Loading/loading.page';
-import AppLayout from './components/layout/app.layout';
-import DashboardLayout from './components/layout/dashboard.layout';
+import AppLayout from './layouts/app.layout';
+import DashboardLayout from './layouts/dashboard.layout';
 
 
 const NotFoundPage = lazy(() => import('./pages/404/404'));
