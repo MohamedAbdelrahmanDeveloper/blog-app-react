@@ -21,7 +21,7 @@ function ProfilePage() {
                     </div>
                     <div className="space-y-1">
                         <h1 className="text-xl font-bold">Mohamed Abdelrahman</h1>
-                        <h3 className="text-base-content/60">@m7md0a</h3>
+                        <h3 className="text-base-content/60">@MohamedAbdelrahmanDeveloper</h3>
                         <p className="text-sm text-base-content/80">This is bio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, tempora facere. Itaque architecto perspiciatis dolore nesciunt doloribus consequuntur commodi debitis atque ipsum enim! Soluta, aliquam! Voluptatem laboriosam deserunt amet unde.</p>
                         <ul className="[&>li]:flex [&>li]:items-center [&>li]:gap-x-2 [&>li>i]:text-base-content/80 flex flex-col md:flex-row gap-x-4 text-base-content py-4">
                             <li>
@@ -30,7 +30,7 @@ function ProfilePage() {
                             </li>
                             <li>
                                 <i className='bi bi-link-45deg'></i>
-                                <a className="link " href="https://m-Abdelrahman.vercel.app">https://m-Abdelrahman.vercel.app</a>
+                                <a className="link " href="https://mohamedabdelrahmandeveloper.vercel.app/">https://m-Abdelrahman.vercel.app</a>
                             </li>
                         </ul>
                      </div>

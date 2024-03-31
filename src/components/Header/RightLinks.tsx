@@ -39,7 +39,7 @@ function RightLinks() {
       }, [theme])
   return (
     <div className="md:gap-x-2">
-        <a className='btn btn-sm md:btn-md btn-ghost' target='_blank' href="https://github.com/m7md0a"><i className='bi bi-github text-xl'></i></a>
+        <a className='btn btn-sm md:btn-md btn-ghost' target='_blank' href="https://github.com/MohamedAbdelrahmanDeveloper"><i className='bi bi-github text-xl'></i></a>
         <div className="dropdown dropdown-end">
         <div tabIndex={0} role="button" className="btn btn-ghost"><i className="bi bi-paint-bucket text-2xl"></i></div>
         <ul tabIndex={0} className="dropdown-content dropdown-right mt-3 z-[1] p-2 shadow bg-base-100 rounded-box grid grid-cols-2 gap-4 w-[60vw] md:w-52 h-[54vh]">
@@ -66,7 +66,7 @@ function RightLinks() {
         <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
             <div className="card-body">
             <span className="font-bold text-lg">Mohamed</span>
-            <span className="text-info">@m7md0a</span>
+            <span className="text-info">@MohamedAbdelrahmanDeveloper</span>
             <div className="card-actions">
                 <Link to={'/profile/1'} className="btn btn-primary btn-block">Profile</Link>
             </div>
